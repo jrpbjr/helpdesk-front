@@ -1,10 +1,19 @@
 <div class="container">
+
+  <h1>Listando Técnico</h1>
+
+  <button class="mat-elevation-z8" mat-stroked-button color="primary">Novo Técnico</button>
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
     <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource">
       
           <!-- Position Column -->
-          <ng-container matColumnDef="position">
-            <th mat-header-cell *matHeaderCellDef> Id </th>
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID</th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
           </ng-container>
       
@@ -15,13 +24,13 @@
           </ng-container>
       
           <!-- Weight Column -->
-          <ng-container matColumnDef="weight">
+          <ng-container matColumnDef="cpf">
             <th mat-header-cell *matHeaderCellDef> Cpf </th>
             <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
           </ng-container>
       
           <!-- Symbol Column -->
-          <ng-container matColumnDef="symbol">
+          <ng-container matColumnDef="email">
             <th mat-header-cell *matHeaderCellDef> Email </th>
             <td mat-cell *matCellDef="let element"> {{element.email}} </td>
           </ng-container>
