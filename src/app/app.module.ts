@@ -38,7 +38,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 //import { NgxMaskModule } from 'ngx-mask';
 
-import { NgxMaskModule} from 'ngx-mask'
+import { NgxMaskModule} from 'ngx-mask';
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component'
 
 //export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -51,7 +52,8 @@ import { NgxMaskModule} from 'ngx-mask'
     HeaderComponent,
     TecnicoListComponent,
     LoginComponent,
-    TecnicoCreateComponent
+    TecnicoCreateComponent,
+    TecnicoUpdateComponent
   ],
   imports: [
     NgxMaskModule.forRoot(),
